@@ -1,1 +1,1 @@
-python Scapbot.py
+worker: python Scapbot.py

@@ -1,7 +1,6 @@
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 
-# Token de tu bot (NO compartas esto en producción)
 TOKEN = "7352077618:AAE_5Ow2JkZVUsGTCxNY8bAlo1AZ7Lv8yPY"
 
 # Comando /start
@@ -12,7 +11,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("Puedes usar los comandos disponibles para interactuar conmigo.")
 
-# Inicializa y ejecuta el bot
+# Ejecutar el bot
 if __name__ == '__main__':
     app = ApplicationBuilder().token(TOKEN).build()
 
@@ -21,5 +20,6 @@ if __name__ == '__main__':
 
     print("🤖 Bot en ejecución...")
     app.run_polling()
+
 
 
